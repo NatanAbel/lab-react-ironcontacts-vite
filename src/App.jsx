@@ -23,11 +23,8 @@ const getRandom = ()=>{
   let randomContact = remContacts[randomIndex];
   console.log("randomContact....",randomContact);
   setContacts([...contacts,randomContact]);
-  let filterdContacts = remContacts.filter((oneContact)=>{
-    if(oneContact.name !== randomContact.name){
-      return oneContact;
-    }
-  })
+  let filterdContacts = remContacts.filter((oneContact)=> oneContact.name !== randomContact.name)
+  
   setRemContacts(filterdContacts);
 }
 // Sorting contacts by name and popularity using ternary operator to the function given above 
