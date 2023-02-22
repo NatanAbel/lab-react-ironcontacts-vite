@@ -57,7 +57,7 @@ const removeContact =(id)=>{
       {sortedContacts.map((contact)=>{
         return(
           
-        <tr>
+        <tr key={contact.id}>
           <td>
             <img
               src={contact.pictureUrl}
