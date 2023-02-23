@@ -17,14 +17,14 @@ const App = () => {
 
 // Adding a random contact
 const getRandom = ()=>{
-  console.log("buttonnnnn");
   // Getting a random number of index
   let randomIndex = Math.floor(Math.random() * remContacts.length);
   let randomContact = remContacts[randomIndex];
-  console.log("randomContact....",randomContact);
+  // Copying the contact to keep the original and adding a random contact afterwards
   setContacts([...contacts,randomContact]);
+  // Removing the random contact from the array of remContact state after added to the contact state
   let filterdContacts = remContacts.filter((oneContact)=> oneContact.name !== randomContact.name)
-  
+  //Update the remContacts state with the filtered array
   setRemContacts(filterdContacts);
 }
 // Sorting contacts by name and popularity using ternary operator to the function given above 
